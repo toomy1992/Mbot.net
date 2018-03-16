@@ -1,0 +1,13 @@
+Here shoudl be :
+    - client_secret.json see https://developers.google.com/api-client-library/dotnet/guide/aaa_client_secrets
+    - config.xml which should look like this : 
+        <?xml version='1.0'?>
+            <Parameters>
+                <Discord>
+                    <DiscordToken>YourToken</DiscordToken>
+                </Discord>
+                <GoogleSheet>
+                    <GoogleSheetID>TbGoogleSheet</GoogleSheetID>
+                </GoogleSheet>
+            </Parameters>
+    - WelcomeMsg see https://support.discordapp.com/hc/en-us/articles/210298617-Markdown-Text-101-Chat-Formatting-Bold-Italic-Underline-

@@ -46,10 +46,6 @@ namespace Mbot.Modules
 
         }
 
-        internal static ulong GetAdminChannel()
-        {
-            throw new NotImplementedException();
-        }
 
         internal static string GetWelcomeMsg()
         {
@@ -71,7 +67,7 @@ namespace Mbot.Modules
         {
             XmlDocument doc = new XmlDocument();
             doc.Load("Modules/RequestedFile/config.xml");
-            XmlNode Token = doc.DocumentElement.SelectSingleNode("/Parameters/Discord/DiscordToken");
+            XmlNode Token = doc.DocumentElement.SelectSingleNode("/Parameters/GoogleSheet/GoogleSheetID");
             return Token.InnerText;
         }
 

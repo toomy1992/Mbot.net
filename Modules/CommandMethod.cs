@@ -57,7 +57,7 @@ namespace Mbot.Modules
         {
             XmlDocument doc = new XmlDocument();
             doc.Load("Modules/RequestedFile/config.xml");
-            XmlNode Token = doc.DocumentElement.SelectSingleNode("/Parameters/Discord/DiscordToken");
+            XmlNode Token = doc.DocumentElement.SelectSingleNode("/Parameters/GoogleSheet/GoogleSheetID");
             return Token.InnerText;
         }
 
@@ -67,7 +67,7 @@ namespace Mbot.Modules
         {
             XmlDocument doc = new XmlDocument();
             doc.Load("Modules/RequestedFile/config.xml");
-            XmlNode Token = doc.DocumentElement.SelectSingleNode("/Parameters/GoogleSheet/GoogleSheetID");
+            XmlNode Token = doc.DocumentElement.SelectSingleNode("/Parameters/Discord/DiscordToken");
             return Token.InnerText;
         }
 

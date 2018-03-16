@@ -1,0 +1,10 @@
+/home/tg/Pulpit/Mbot/bin/Debug/netcoreapp2.0/Mbot.deps.json
+/home/tg/Pulpit/Mbot/bin/Debug/netcoreapp2.0/Mbot.runtimeconfig.json
+/home/tg/Pulpit/Mbot/bin/Debug/netcoreapp2.0/Mbot.runtimeconfig.dev.json
+/home/tg/Pulpit/Mbot/bin/Debug/netcoreapp2.0/Mbot.dll
+/home/tg/Pulpit/Mbot/bin/Debug/netcoreapp2.0/Mbot.pdb
+/home/tg/Pulpit/Mbot/obj/Debug/netcoreapp2.0/Mbot.csproj.CoreCompileInputs.cache
+/home/tg/Pulpit/Mbot/obj/Debug/netcoreapp2.0/Mbot.AssemblyInfoInputs.cache
+/home/tg/Pulpit/Mbot/obj/Debug/netcoreapp2.0/Mbot.AssemblyInfo.cs
+/home/tg/Pulpit/Mbot/obj/Debug/netcoreapp2.0/Mbot.dll
+/home/tg/Pulpit/Mbot/obj/Debug/netcoreapp2.0/Mbot.pdb

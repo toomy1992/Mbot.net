@@ -31,7 +31,7 @@ namespace Mbot.Modules
                     credPath = Path.Combine(credPath, ".credentials/sheets.googleapis.com-dotnet-quickstart.json");
 
                     credential = GoogleWebAuthorizationBroker.AuthorizeAsync(GoogleClientSecrets.Load(stream).Secrets, Scopes, "user", CancellationToken.None, new FileDataStore(credPath, true)).Result;
-
+                    Console.WriteLine("Credential file saved to: " + credPath);
                 }
                 var service = new SheetsService(new BaseClientService.Initializer()
                 {
@@ -79,6 +79,7 @@ namespace Mbot.Modules
                
                ulong UserId = ulong.Parse(User.id);
                var GetUser = context.Client.GetUser(UserId);
+               bool send = false;
                if(GetUser == null) continue;
                if(User.Pools == null) continue;
                foreach (var Pool  in User.Pools)
@@ -87,10 +88,16 @@ namespace Mbot.Modules
                    String Order ="";
                    foreach (var Orders in SortedOrder)
                     {
-                        Order += "Plutoon Number: " + Orders.PlatoonNum + "\t Character: " + Orders.Character +" \n";                        
+                        Order += "Plutoon Number: " + Orders.PlatoonNum + "\t Character: " + Orders.Character +" \n";          
+                        send = true;              
                     }
 
                     await UserExtensions.SendMessageAsync(GetUser, User.name + " Here is your's " +Pool.Platoon+ " asigment ", false, EmBul("Phase: " + Pool.Phase + " Plutoon: " + Pool.Platoon, Order, Pool.Platoon));  
+                }
+                if(send == true)
+                {
+                await   context.Channel.SendMessageAsync( User.name  + " recive PM");
+                send = false;
                 }
            }
         }

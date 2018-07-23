@@ -22,12 +22,16 @@ namespace Mbot.Modules
     [Command("SendPlatoonOrders")]
     public async Task Send_Platoon_Orders()
         {
+            lock (this)
+            {
             string SheetId = CommandMethod.GetSheetId();
             IList<IList<Object>> List = CommandMethod.GoogleSheetReader(SheetId,"Discord!A2:B51");
             List<User> UsersList = CommandMethod.AddUser(List);
             UsersList = CommandMethod.PlatoonOrders(UsersList,SheetId,"Platoon!A2:B2","Platoon!C2:Y16","Platoon!C20:Y34","Platoon!C38:Y52");
             CommandMethod.SendPM(UsersList,Context);
+            }
             await ReplyAsync ("Request Finished");
+            
         }
 
     } 

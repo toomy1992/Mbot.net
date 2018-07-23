@@ -20,7 +20,7 @@ namespace Mbot.Modules
         internal static IList<IList<Object>> GoogleSheetReader(string spreadsheetid, string tabledata)
         {
             string[] Scopes = { SheetsService.Scope.SpreadsheetsReadonly };
-            string ApplicationName = "SwGoh Admin Bot";
+            string ApplicationName = "SwGoh Bot";
             UserCredential credential;
 
                 using (var stream =
